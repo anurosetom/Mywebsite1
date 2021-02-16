@@ -1,0 +1,25 @@
+{% extends 'index.html' %}
+{% load static %}
+
+{% block script %}
+
+ <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+  <script src="{% static 'js/myscript.js' %}"></script>
+
+{% endblock %}
+
+{% block content %}
+<h1 class="searchhead"> Product Search </h1>
+
+<input type="text" name="keyword" id="keyword">
+<input type="button" value="search" onclick="getdata()">
+<input type="button" value="draw" onclick="drawchart()">
+
+<div id="data">
+</div>
+
+<div>
+     <canvas id="myChart"></canvas>
+</div>
+
+ {% endblock %}

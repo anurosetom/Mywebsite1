@@ -1,0 +1,20 @@
+{% extends 'index.html' %}
+
+{%  block content %}
+
+    this is my Product list page
+
+{% for p in products  %}
+
+<br/>
+{{p.id}}<br/>
+<a href="/product/detail/{{p.id}}">{{p.name}}</a><br/>
+{{p.description}}<br/>
+{{p.price}}
+<br/>
+{% endfor %}
+
+
+    {% endblock %}
+
+
